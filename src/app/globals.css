@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
 @theme{
     --color-dark-1:#1C1F2E;
     --color-dark-2:#161925;
@@ -12,6 +16,6 @@
     --color-orange-1:#1C1F2E;
     --color-purple-1:#830EF9;
     --color-yellow-1:#F9A90E;
- 
 
 }
+
