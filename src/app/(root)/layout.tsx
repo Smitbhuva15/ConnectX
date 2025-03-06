@@ -1,5 +1,7 @@
 import { Main } from "next/document";
-import { ReactNode } from "react";
+
+import StreamProvider from "../../../provider/streamProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function RootLayout({
   children,
@@ -10,7 +12,13 @@ export default function RootLayout({
 
 
     <main>
-      {children}
+      <StreamProvider>
+        {children}
+      </StreamProvider>
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
     </main>
   );
 }

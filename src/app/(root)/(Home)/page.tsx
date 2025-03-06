@@ -1,4 +1,4 @@
-import MettingList from '@/components/MettingList';
+import MettingList from '@/components/meeting/MettingList';
 import React from 'react'
 
 export default function page() {

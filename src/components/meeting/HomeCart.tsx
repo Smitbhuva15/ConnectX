@@ -7,12 +7,14 @@ type homecartprops = {
   description: string
   title: string
   className?: string
+  handelmeeting?: () => void; 
 }
 
-export default function HomeCart({ img, description, title, className }: homecartprops) {
+export default function HomeCart({ img, description, title, className,handelmeeting }: homecartprops) {
   return (
     <section
       className={`${className}  px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px] cursor-pointer`}
+      onClick={handelmeeting}
     >
       <div className="flex-center glassmorphism size-12 rounded-[10px]">
         <Image src={img} alt="meeting" width={27} height={27} />
