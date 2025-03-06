@@ -13,7 +13,7 @@
     --color-sky-1:#C9DDFF;
     --color-sky-2:#ECF0FF;
     --color-sky-3:#FF742E;
-    --color-orange-1:#1C1F2E;
+    --color-orange-1:#FF742E;
     --color-purple-1:#830EF9;
     --color-yellow-1:#F9A90E;
 
@@ -122,4 +122,8 @@
     animation-timing-function: ease-in;
     width: 100%;
   }
+}
+
+.bg-hero4{
+  background-image: url('/images/hero-background.png');
 }
