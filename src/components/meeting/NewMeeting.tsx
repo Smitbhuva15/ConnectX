@@ -25,12 +25,9 @@ export default function NewMeeting() {
   const client=useStreamVideoClient();
 
   const createmeeting=async()=>{
-    console.log("cccccccccccccccccc")
-
+  
     if (!client || !user) return;
     
- 
-
     try {
       if (!values.dateTime) {
         toast.error('Please select a date and time' );
