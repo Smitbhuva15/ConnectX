@@ -49,13 +49,12 @@ export default function CallList({ type }: { type: 'upcoming' | 'ended' | 'recor
               const callData = await Promise.all(
                 callRecordings.map((meeting) => meeting.queryRecordings())
               );
-              console.log(callData)
-        
+           
               const recordings = callData
                 .filter((call) => call?.recordings?.length > 0)
                 .flatMap((call) => call.recordings);
         
-              console.log(recordings, "?//////////////////");
+            
               setRecordings(recordings);
             } catch (error) {
               console.error("Error fetching recordings:", error);
@@ -94,7 +93,7 @@ export default function CallList({ type }: { type: 'upcoming' | 'ended' | 'recor
                                 title={
                                     (meeting as Call).state?.custom?.description ||
                                     (meeting as CallRecording).filename?.substring(0, 20) ||
-                                    'No Description'
+                                    'Personal Meeting'
                                 }
                                 date={
                                     (meeting as Call).state?.startsAt?.toLocaleString() ||
