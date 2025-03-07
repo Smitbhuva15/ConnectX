@@ -14,7 +14,8 @@ export default function CallList({ type }: { type: 'upcoming' | 'ended' | 'recor
         useGetCall();
     const [recordings, setRecordings] = useState<CallRecording[]>([]);
 
-
+    
+    
     const getCalls = () => {
         switch (type) {
             case 'ended':
@@ -46,6 +47,7 @@ export default function CallList({ type }: { type: 'upcoming' | 'ended' | 'recor
             if (!callRecordings) return; // Ensure it's not undefined or null
         
             try {
+                
               const callData = await Promise.all(
                 callRecordings.map((meeting) => meeting.queryRecordings())
               );

@@ -36,7 +36,7 @@ export default function MeetingCard({ icon,
             </article>
 
             <article className={"flex justify-center relative"}>
-                <div className="relative flex w-full max-sm:hidden">
+                <div className="relative flex w-[50%] max-sm:hidden">
                     {avatarImages.map((img, index) => (
                         <Image
                             key={index}
@@ -54,7 +54,7 @@ export default function MeetingCard({ icon,
                 </div>
 
                 {!isPreviousMeeting && (
-          <div className="flex gap-2">
+          <div className="flex gap-2 ">
             <Button onClick={handleClick} className="rounded bg-blue-1 px-6">
               {buttonIcon1 && (
                 <Image src={buttonIcon1} alt="feature" width={20} height={20} />

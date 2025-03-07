@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import { Textarea } from '../ui/textarea';
 import ReactDatePicker from "react-datepicker";
+import { Input } from '../ui/input';
 
 
 const initialValues = {
@@ -68,6 +69,11 @@ export default function NewMeeting() {
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
+  const handelredording = () => {
+    router.push('/recordings')
+  }
+
+
   return (
     <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       <HomeCart
@@ -98,6 +104,7 @@ export default function NewMeeting() {
         title="View Recordings"
         description="Meeting Recordings"
         className="bg-yellow-1"
+        handelmeeting={handelredording}
       />
 
 
@@ -112,6 +119,27 @@ export default function NewMeeting() {
             onClose={() => setMeeting(undefined)}
             handelmeeting={createmeeting}
           />
+      
+        )
+      }
+
+      {
+        meeting === 'Join Meeting' &&
+        (
+          <MeetingModal
+            open={meeting === "Join Meeting"}
+            title="Join Meeting"
+            className="text-center"
+            buttonText="Start Meeting"
+            onClose={() => setMeeting(undefined)}
+            handelmeeting={()=>router.push(values?.link)}
+          >
+             <Input
+              placeholder="Meeting link"
+             onChange={(e)=>setValues({...values,link:e.target.value})}
+              className="border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0"
+            />
+            </MeetingModal>
         )
       }
       {meeting === "Schedule Meeting" && (
