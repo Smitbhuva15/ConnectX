@@ -1,7 +1,6 @@
-import { Main } from "next/document";
 
 import StreamProvider from "../../../provider/streamProvider";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { Metadata } from "next";
 
 

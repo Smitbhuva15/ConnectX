@@ -10,7 +10,7 @@ import MeetingRoom from '@/components/meeting/MeetingRoom'
 
 export default function Meeting() {
   const { id } = useParams()
-  const { isLoaded, user } = useUser();
+  const { isLoaded } = useUser();
   const [isSetupComplete, setIsSetupComplete] = useState(false);
   const { call, isCallLoading } = useGetCallById(id);
 
