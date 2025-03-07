@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import useGetCall from '../../../hooks/useGetCall';
-import { CallRecording } from '@stream-io/node-sdk';
+import { CallRecording } from "@stream-io/video-client";
 import Loader from '../Loader';
 import MeetingCard from './MeetingCard';
 import { Call } from '@stream-io/video-react-sdk';
@@ -12,7 +12,7 @@ export default function CallList({ type }: { type: 'upcoming' | 'ended' | 'recor
     const router = useRouter();
     const { endedCalls, upcomingCalls, callRecordings, isLoading } =
         useGetCall();
-    const [recordings, setRecordings] = useState<CallRecording[]>([]);
+        const [recordings, setRecordings] = useState<CallRecording[]>([]);
 
     
     
