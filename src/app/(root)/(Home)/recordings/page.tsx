@@ -1,7 +1,12 @@
+import CallList from '@/components/meeting/CallList'
 import React from 'react'
 
 export default function Recording() {
   return (
-    <div>Recording</div>
+    <section className="flex size-full flex-col gap-10 text-white">
+          <h1 className="text-3xl font-bold">Recordings</h1>
+    
+          <CallList type="recording" />
+          </section>
   )
 }
