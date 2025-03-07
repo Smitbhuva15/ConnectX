@@ -8,7 +8,7 @@ type meetingprops = {
   open: boolean;
   onClose: () => void;
   image?: string;
-  className: string;
+  className?: string;
   buttonText?: string;
   buttonIcon?: string
   title: string
