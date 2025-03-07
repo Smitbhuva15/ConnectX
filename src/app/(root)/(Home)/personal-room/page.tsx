@@ -1,7 +1,7 @@
 "use client"
 import { Button } from '@/components/ui/button';
 import { useUser } from '@clerk/nextjs';
-import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
+import { useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useRouter } from 'next/navigation';
 import React from 'react'
 import toast from 'react-hot-toast';

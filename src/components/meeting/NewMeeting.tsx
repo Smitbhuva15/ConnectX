@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import HomeCart from './HomeCart'
 import MeetingModal from './MeetingModal';
 import { useUser } from '@clerk/nextjs';
@@ -24,7 +24,7 @@ export default function NewMeeting() {
   const router = useRouter()
 
 
-  const { user, isLoaded } = useUser()
+  const { user} = useUser()
   const client = useStreamVideoClient();
 
   const createmeeting = async () => {
