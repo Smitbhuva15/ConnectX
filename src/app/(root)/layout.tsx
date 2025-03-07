@@ -2,6 +2,13 @@ import { Main } from "next/document";
 
 import StreamProvider from "../../../provider/streamProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "ConnectX High-Quality Virtual Meetings",
+  description: "Next-Level Video Conferencing",
+};
 
 export default function RootLayout({
   children,

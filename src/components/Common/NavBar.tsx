@@ -20,7 +20,7 @@ export default function NavBar() {
           width={32}
           height={32}
           alt="ConnectX logo"
-          className="max-sm:size-10"
+          className="max-sm:size-10 mt-2"
         />
         <p className="text-[26px] font-extrabold text-white max-sm:hidden">
           ConnectX

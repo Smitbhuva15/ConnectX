@@ -1,7 +1,12 @@
 import NavBar from "@/components/Common/NavBar";
 import SideBar from "@/components/Common/SideBar";
+import { Metadata } from "next";
 
 
+export const metadata: Metadata = {
+  title: "ConnectX High-Quality Virtual Meetings",
+  description: "Next-Level Video Conferencing",
+};
 
 export default function RootLayout({
     children,
